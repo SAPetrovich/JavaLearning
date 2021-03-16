@@ -3,7 +3,6 @@ package Lesson1;
 import org.junit.Before;
 import org.junit.Test;
 
-import static Lesson1.SetOfTags.*;
 import static org.junit.Assert.*;
 
 public class SetOfTagsTest {
@@ -16,6 +15,12 @@ public class SetOfTagsTest {
     }
 
     @Test
+    public void testSetOfTags() {
+        assertEquals(0, new SetOfTags().size());
+        assertEquals(4, new SetOfTags("Вася,Петя, Маша Саша").size());
+    }
+
+    @Test
     public void testToString() {
 
         assertEquals("", tags.toString());
@@ -24,7 +29,7 @@ public class SetOfTagsTest {
         assertEquals("Вася", tags.toString());
 
         tags.add("Дуся");
-        assertEquals("Вася" + TAGS_DELIMITER + "Дуся", tags.toString());
+        assertEquals("Вася" + tags.TAGS_DELIMITER + "Дуся", tags.toString());
     }
 
     @Test

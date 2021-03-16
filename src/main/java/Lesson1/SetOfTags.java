@@ -2,11 +2,13 @@ package Lesson1;
 
 public class SetOfTags {
 
-    public static final String TAGS_DELIMITER = ", ";
+    @SuppressWarnings("CanBeFinal")
+    public String TAGS_DELIMITER = ", ";
+    @SuppressWarnings("CanBeFinal")
     public String TAGS_DELIMITER_MASK = "[\\s;,]+";
 
     private String tags = "";
-    private String TAGS_FRAMING = " ";
+    private final String TAGS_FRAMING = " ";
 
     public SetOfTags() {
     }
@@ -49,13 +51,18 @@ public class SetOfTags {
      */
     public boolean add(String tags) {
         int processed = 0;
+        StringBuilder newTags = new StringBuilder(this.tags);
         for (String tag : toArray(tags)) {
             if (! this.tags.contains(tag)) {
-                this.tags += TAGS_FRAMING + tag + TAGS_FRAMING;
+                newTags.append(TAGS_FRAMING).append(tag).append(TAGS_FRAMING);
                 processed++;
             }
         }
-        return processed > 0;
+        if (processed > 0) {
+            this.tags = newTags.toString();
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -110,7 +117,6 @@ public class SetOfTags {
      * @return <tt>true</tt> если множество изменилось
      */
     public boolean intersection(String tags) {
-        SetOfTags savedSetOfTags = new SetOfTags(tags);
         int processed = 0;
         for (String tag : toArray(this.tags)) {
             if (! tags.contains(tag)) {
