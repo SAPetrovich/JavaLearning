@@ -2,6 +2,9 @@ package Lesson1;
 
 public class SetOfTags {
 
+    public static final String TAGS_DELIMITER = ", ";
+    public String TAGS_DELIMITER_MASK = "[\\s;,]+";
+
     public SetOfTags() {
     }
 
