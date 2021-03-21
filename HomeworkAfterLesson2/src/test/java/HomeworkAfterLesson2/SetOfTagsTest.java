@@ -29,7 +29,7 @@ public class SetOfTagsTest {
         assertEquals("Вася", tags.toString());
 
         tags.add("Дуся");
-        assertEquals("Вася" + SetOfTags.TAGS_DELIMITER + "Дуся", tags.toString());
+        assertEquals("Вася" + tags.TAGS_DELIMITER + "Дуся", tags.toString());
     }
 
     @Test

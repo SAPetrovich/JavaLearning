@@ -2,11 +2,13 @@ package HomeworkAfterLesson2;
 
 public class SetOfTags {
 
-    public static final String TAGS_DELIMITER = ", ";
+    @SuppressWarnings("CanBeFinal")
+    public String TAGS_DELIMITER = ", ";
+    @SuppressWarnings("CanBeFinal")
     public String TAGS_DELIMITER_MASK = "[\\s;,]+";
 
     private String tags = "";
-    private String TAGS_FRAMING = " ";
+    private final String TAGS_FRAMING = " ";
 
     public SetOfTags() {
     }
@@ -49,12 +51,14 @@ public class SetOfTags {
      */
     public boolean add(String tags) {
         int processed = 0;
+        StringBuilder stringBuilder = new StringBuilder(this.tags);
         for (String tag : toArray(tags)) {
             if (! this.tags.contains(tag)) {
-                this.tags += TAGS_FRAMING + tag + TAGS_FRAMING;
+                stringBuilder.append(TAGS_FRAMING).append(tag).append(TAGS_FRAMING);
                 processed++;
             }
         }
+        this.tags = String.valueOf(stringBuilder);
         return processed > 0;
     }
 
