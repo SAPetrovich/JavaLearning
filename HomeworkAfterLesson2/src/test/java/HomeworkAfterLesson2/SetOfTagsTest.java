@@ -15,6 +15,12 @@ public class SetOfTagsTest {
     }
 
     @Test
+    public void testSetOfTags() {
+        assertEquals(0, new SetOfTags().size());
+        assertEquals(4, new SetOfTags("Вася,Петя, Маша Саша").size());
+    }
+
+    @Test
     public void testToString() {
 
         assertEquals("", tags.toString());
