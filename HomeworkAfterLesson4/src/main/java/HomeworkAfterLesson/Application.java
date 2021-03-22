@@ -11,8 +11,8 @@ public class Application {
 
         String srcFileName = "HomeworkAfterLesson4.TestData.txt";
         String dstFileName = "HomeworkAfterLesson4.Result.txt";
-        char oldChar = ' ';
-        char newChar = '_';
+        char oldChar = 'я';
+        char newChar = ' ';
 
         System.out.printf("Программа заменяет символы '%c' на символы '%c' в текстовом файле.\n\n", oldChar, newChar);
 
