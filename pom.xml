@@ -23,6 +23,7 @@
         <module>HomeworkAfterLesson3</module>
         <module>HomeworkAfterLesson2</module>
         <module>ExamplOptional</module>
+        <module>AccessingDataJpa</module>
     </modules>
 
     <properties>
