@@ -10,6 +10,9 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>HomeworkAfterLesson4</module>
+        <module>HomeworkAfterLesson3</module>
+        <module>HomeworkAfterLesson2</module>
+        <module>ExamplOptional</module>
     </modules>
 
     <properties>
