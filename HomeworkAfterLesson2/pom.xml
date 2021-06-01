@@ -3,17 +3,27 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>APSysoevHomeTasks</artifactId>
-        <groupId>ru.sber</groupId>
+        <artifactId>JavaLearning</artifactId>
+        <groupId>com.github.SAPetrovich</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>HomeworkAfterLesson2</artifactId>
+    <name>HomeworkAfterLesson2</name>
+    <description>Домашние задание после 2-го урока. Реализация класса, и unit-тест для него.</description>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
 </project>

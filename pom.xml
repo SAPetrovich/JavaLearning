@@ -4,10 +4,20 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>ru.sber</groupId>
-    <artifactId>APSysoevHomeTasks</artifactId>
+    <groupId>com.github.SAPetrovich</groupId>
+    <artifactId>JavaLearning</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <name>JavaLearning</name>
+    <description>Домашние задания, примеры, эксперименты, и т.п. для изучения JAVA</description>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.4.3</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
     <modules>
         <module>HomeworkAfterLesson4</module>
         <module>HomeworkAfterLesson3</module>
@@ -25,19 +35,16 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.18</version>
             <scope>compile</scope>
-            <!--
-            <version>RELEASE</version>
-            <scope>provided</scope>
-            -->
+            <!--version>1.18.18</version-->
+            <!--version>RELEASE</version-->
         </dependency>
-        <dependency>
+        <!--dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
             <scope>test</scope>
-        </dependency>
+        </dependency-->
     </dependencies>
 
 </project>

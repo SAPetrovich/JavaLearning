@@ -3,13 +3,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>APSysoevHomeTasks</artifactId>
-        <groupId>ru.sber</groupId>
+        <artifactId>JavaLearning</artifactId>
+        <groupId>com.github.SAPetrovich</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>HomeworkAfterLesson4</artifactId>
+    <description>Домашние задание после 4-го урока. Чтение и запись файла с заменой одного символа на другой.</description>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
